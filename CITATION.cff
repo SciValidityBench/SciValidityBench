@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the SciValidityBench preprint when using this benchmark."
+title: "The Right Fact, the Wrong Decision: SciValidityBench for Scientific Agent Memory"
+type: software
+authors:
+  - family-names: Pan
+    given-names: Yuexi
+    affiliation: "Tsinghua University; University of Science and Technology of China"
+  - family-names: Chen
+    given-names: Yongchao
+    affiliation: "Tsinghua University"
+version: 1.0.0
+repository-code: "https://github.com/SciValidityBench/SciValidityBench"
+url: "https://scivaliditybench.github.io/SciValidityBench/"
+license: Apache-2.0

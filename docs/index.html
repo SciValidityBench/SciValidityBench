@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SciValidityBench evaluates whether scientific agents know when a remembered fact is valid to use.">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta property="og:title" content="SciValidityBench — The right fact. The wrong decision.">
+  <meta property="og:description" content="An executable benchmark for scientific agent memory.">
+  <meta property="og:type" content="website">
+  <title>SciValidityBench</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top">
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="SciValidityBench home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img"><defs><linearGradient id="brandOrbitHeader" x1="10" y1="40" x2="44" y2="12" gradientUnits="userSpaceOnUse"><stop stop-color="#0071e3"/><stop offset="1" stop-color="#7158cf"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="#eef4ff"/><circle cx="32" cy="32" r="20" fill="none" stroke="#a9c3ea" stroke-width="1.6" stroke-dasharray="1.6 3.6" stroke-linecap="round"/><g class="orbit-arc"><circle cx="32" cy="32" r="20" fill="none" stroke="url(#brandOrbitHeader)" stroke-width="4.6" stroke-linecap="round" pathLength="100" stroke-dasharray="38 62" transform="rotate(-200 32 32)"/><circle cx="41" cy="14.1" r="4" fill="#7158cf" stroke="#eef4ff" stroke-width="2"/></g><circle cx="32" cy="32" r="6.5" fill="#1d1d1f"/></svg>
+        </span>
+        <span>SciValidityBench</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#idea"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 18V6m0 12h14M9 14l3-4 3 2 4-5"/></svg><span>Idea</span></a>
+        <a href="#benchmark"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg><span>Benchmark</span></a>
+        <a href="#evidence"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19V9m7 10V5m7 14v-7"/></svg><span>Evidence</span></a>
+        <a href="#code"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m7 8-4 4 4 4m10-8 4 4-4 4M14 5l-4 14"/></svg><span>Code</span></a>
+        <a class="nav-paper" href="assets/SciValidityBench.pdf"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM15 3v4h4"/><path d="M9 12h6m-6 4h4"/></svg><span>Paper</span><b aria-hidden="true">↗</b></a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <span class="nav-progress" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-minimal section-pad">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="hero-center page-width reveal">
+        <h1><span class="title-sci">Sci</span><span class="title-validity">Validity</span><span class="title-bench">Bench</span></h1>
+        <p class="hero-tagline">A benchmark for evaluating whether scientific agents use remembered evidence with the right validity state.</p>
+        <div class="authors">
+          <span>Yuexi Pan<sup>1,2</sup></span><span class="author-dot">·</span><span>Yongchao Chen<sup>1,*</sup></span>
+        </div>
+        <p class="affiliations"><sup>1</sup> Tsinghua University &nbsp; <sup>2</sup> University of Science and Technology of China</p>
+        <p class="hero-note"><span class="note-star">*</span> Corresponding author</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="assets/SciValidityBench.pdf">Paper <span aria-hidden="true">↗</span></a>
+          <a class="button button-quiet" href="https://github.com/SciValidityBench/SciValidityBench">Code <span aria-hidden="true">↗</span></a>
+          <a class="button button-video-improved" href="#video">Video <span aria-hidden="true">↓</span></a>
+          <a class="button button-quiet" href="#benchmark">Benchmark <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section section-pad" id="video">
+      <div class="page-width">
+        <div class="video-heading reveal"><p class="eyebrow">Watch the benchmark</p><h2 class="nowrap-line">See the distinction in motion.</h2></div>
+        <div class="video-stage reveal">
+          <video controls playsinline preload="metadata" aria-label="SciValidityBench project video" src="assets/SciValidityBench.mp4"></video>
+        </div>
+      </div>
+    </section>
+
+    <section class="idea section-pad" id="idea">
+      <div class="page-width">
+        <div class="intro-row">
+          <div class="section-intro reveal">
+            <p class="eyebrow">01 / The idea</p>
+            <h2>A fact can be true.<br><span class="nowrap-line">Its use can still be wrong.</span></h2>
+          </div>
+          <button class="replay" type="button" id="idea-replay" aria-label="Replay idea animation"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0 1 4"/><path d="M20 4v7h-7"/></svg><span>Replay</span></button>
+        </div>
+        <div class="flow idea-flow armed" id="idea-flow">
+          <article class="node node-1 anim" style="--d:0ms">
+            <div class="step icon-grey"><svg viewBox="0 0 24 24"><path d="M4 18V6m0 12h16M8 15l3-4 3 2 4-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></div>
+            <span class="step-number">1</span>
+            <h3>Correct record</h3>
+            <p>Retrieve the right result.</p>
+          </article>
+          <div class="zone-label label-local anim" style="--d:250ms"><span>Where retrieval stops</span><strong>Memory correctness is local.</strong></div>
+          <div class="cross" aria-hidden="true">
+            <span class="divider" style="--d:450ms"></span>
+            <span class="divider-label" style="--d:650ms">the moment after retrieval</span>
+            <span class="arrow" style="--d:350ms"><i></i></span>
+          </div>
+          <div class="zone" style="--d:800ms">
+            <div class="zone-inner">
+              <article class="node node-2 anim" style="--d:1050ms">
+                <div class="step icon-green"><svg viewBox="0 0 24 24"><path d="M12 3 19 6v5c0 4.4-2.9 8.2-7 10-4.1-1.8-7-5.6-7-10V6l7-3Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg></div>
+                <span class="step-number">2</span>
+                <h3>Governing state</h3>
+                <p>Recover the conditions that give it meaning.</p>
+              </article>
+              <span class="arrow" style="--d:1350ms" aria-hidden="true"><i></i></span>
+              <article class="node node-3 anim" style="--d:1600ms">
+                <div class="step icon-purple"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h11M4 17h7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/><circle cx="18" cy="12" r="2.5" fill="currentColor"/></svg></div>
+                <span class="step-number">3</span>
+                <h3>Valid decision</h3>
+                <p>Use evidence only when its state permits.</p>
+              </article>
+            </div>
+          </div>
+          <div class="zone-label label-global anim" style="--d:1850ms"><span>What SciValidityBench tests</span><strong>Scientific validity is global.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benchmark section-pad section-tint" id="benchmark">
+      <div class="page-width">
+        <div class="section-intro intro-wide reveal">
+          <p class="eyebrow">02 / The benchmark</p>
+          <h2>One executable contract.<br><span>Five ways to remember.</span></h2>
+          <p>Five memory views. One state-aware contract.</p>
+        </div>
+        <div class="benchmark-shell reveal">
+          <div class="module-rail">
+            <p class="rail-label">Validity modules</p>
+            <button class="module-item active" type="button" data-module="inferential" aria-pressed="true"><span class="module-symbol symbol-blue"><svg viewBox="0 0 24 24"><path d="M4 18 9 11l4 3 7-8"/></svg></span><span><b>Inferential Ledger</b><small>24 tasks · 6 domains</small></span><em>›</em></button>
+            <button class="module-item" type="button" data-module="blind" aria-pressed="false"><span class="module-symbol symbol-green"><svg viewBox="0 0 24 24"><path d="M3 12s3.5-5 9-5 9 5 9 5-3.5 5-9 5-9-5-9-5Z"/><circle cx="12" cy="12" r="2.2"/></svg></span><span><b>Blind Memory</b><small>8 tasks · access timing</small></span><em>›</em></button>
+            <button class="module-item" type="button" data-module="construct" aria-pressed="false"><span class="module-symbol symbol-purple"><svg viewBox="0 0 24 24"><path d="m4 7 8-4 8 4-8 4-8-4Zm0 5 8 4 8-4M4 17l8 4 8-4"/></svg></span><span><b>Construct Drift</b><small>12 tasks · comparability</small></span><em>›</em></button>
+            <button class="module-item" type="button" data-module="absence" aria-pressed="false"><span class="module-symbol symbol-orange"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m7 7 10 10"/></svg></span><span><b>Absence Algebra</b><small>12 tasks · missingness</small></span><em>›</em></button>
+            <button class="module-item" type="button" data-module="sunk" aria-pressed="false"><span class="module-symbol symbol-pink"><svg viewBox="0 0 24 24"><path d="M5 8h9a4 4 0 1 1-4 4H6"/><path d="m9 5-4 3 4 3"/><path d="M5 18h14"/></svg></span><span><b>Sunk Cost Memory</b><small>8 tasks · relevance</small></span><em>›</em></button>
+          </div>
+          <div class="module-stage">
+            <div class="stage-top"><span class="stage-label">Live contract preview</span><div class="stage-dots"><i></i><i></i><i></i></div><span class="stage-code">TaskSpec / seed 7</span></div>
+            <div class="stage-content">
+              <div class="stage-copy">
+                <span class="stage-kicker">SCIENTIFIC STATE</span>
+                <h3 id="stage-title">Inferential Ledger</h3>
+                <p id="stage-description">Outcome selection and stopping rules determine which claim a reported result can support.</p>
+                <div class="stage-tags"><span>state-aware</span><span>oracle-scored</span><span>counterfactual</span></div>
+              </div>
+              <div class="stage-visual">
+                <div class="stage-node node-input"><span>fact</span><b>p = 0.03</b></div>
+                <div class="stage-line"></div>
+                <div class="stage-node node-state"><span>governing state</span><b id="stage-state">planned / selected</b></div>
+                <div class="stage-line"></div>
+                <div class="stage-node node-decision"><span>legal action</span><b id="stage-decision">confirm / explore</b></div>
+              </div>
+            </div>
+            <div class="example-tabs" role="tablist" aria-label="Contract details"><button class="example-tab active" type="button" data-tab="context" role="tab" aria-selected="true">Context</button><button class="example-tab" type="button" data-tab="question" role="tab" aria-selected="false">Question</button><button class="example-tab" type="button" data-tab="state" role="tab" aria-selected="false">State difference</button></div>
+            <div class="example-panels">
+              <div class="example-panel active" data-panel="context" role="tabpanel"><code id="example-context"># Inferential Ledger — schematic example
+Reported result: p = 0.03
+The outcome-selection history and stopping rule
+determine which scientific claim is licensed.</code></div>
+              <div class="example-panel" data-panel="question" role="tabpanel"><code id="example-question">Can this result support a confirmatory claim?
+Compare the same result under the two histories
+in the State Difference tab.</code></div>
+              <div class="example-panel" data-panel="state" role="tabpanel"><div class="comparison-grid"><div class="comparison-side"><b>State A</b><strong id="state-a-title">Plan fixed in advance</strong><ul id="state-a-facts"><li>Outcome preregistered</li><li>Fixed stopping rule</li><li>No selection after inspection</li></ul><span class="answer answer-good" id="state-a-answer">Confirmatory use</span></div><div class="comparison-side comparison-side-warm"><b>State B</b><strong id="state-b-title">Outcome selected after inspection</strong><ul id="state-b-facts"><li>Twenty results inspected</li><li>Outcome selected afterward</li><li>Same reported p-value</li></ul><span class="answer answer-warm" id="state-b-answer">Exploratory use only</span></div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="view-row reveal"><span>Five evaluated memory views</span><div><span>Raw Events</span><span>BM25 Events</span><span>Event Graph</span><span>Flat SSG</span><span>Typed SVL</span></div></div>
+      </div>
+    </section>
+
+    <section class="evidence section-pad" id="evidence">
+      <div class="page-width">
+        <div class="section-intro reveal">
+          <p class="eyebrow">03 / Evidence</p>
+          <h2><span class="nowrap-line headline-dark">Expose the governing state.</span><br><span>Improve the decision.</span></h2>
+          <p>Four model families. Ten unseen seeds. One consistent gain.</p>
+        </div>
+        <div class="evidence-highlight reveal"><div class="highlight-number">+9.2–18.8<span>pp</span></div><div><h3>Compiled state beats a generic Event Graph</h3><p>Every model family shows a positive TaskSpec-balanced gain. Retrieval and generic organization do not reproduce the same cross-family pattern.</p></div><div class="highlight-badge"><span>4 / 4</span><small>model families<br>positive intervals</small></div></div>
+        <div class="figure-grid">
+          <figure class="figure-card reveal"><div class="figure-top"><span>Figure 01</span><b>Same fact, different scientific use</b><span class="figure-arrow">↗</span></div><img src="assets/right_fact_wrong_decision.svg" alt="Two histories share a reported result but lead to different scientific uses" loading="lazy"><figcaption>Retrieval alone cannot distinguish a planned analysis from a result selected after inspection.</figcaption></figure>
+          <figure class="figure-card reveal"><div class="figure-top"><span>Figure 02</span><b>SciStateForge pipeline</b><span class="figure-arrow">↗</span></div><img src="assets/scistateforge_pipeline.svg" alt="SciStateForge compiler pipeline" loading="lazy"><figcaption>One contract connects generated histories, compiled state and scoring.</figcaption></figure>
+          <figure class="figure-card reveal"><div class="figure-top"><span>Figure 03</span><b>Main effect and replications</b><span class="figure-arrow">↗</span></div><img src="assets/main_effect_replications.svg" alt="Main effect and independent replications" loading="lazy"><figcaption>Primary gains remain positive across four model families.</figcaption></figure>
+          <figure class="figure-card reveal"><div class="figure-top"><span>Figure 04</span><b>State use diagnosis</b><span class="figure-arrow">↗</span></div><img src="assets/state_use_diagnosis.svg" alt="State use and failure diagnosis" loading="lazy"><figcaption>Module effects and repairs reveal reader-specific boundaries.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="code section-pad section-tint" id="code">
+      <div class="page-width">
+        <div class="section-intro intro-wide reveal">
+          <p class="eyebrow">04 / Reference implementation</p>
+          <h2>Start with one world.<br><span>See what the reader sees.</span></h2>
+          <p>Deterministic generators, five views and strict scoring.</p>
+        </div>
+        <div class="code-layout reveal">
+          <div class="terminal-card"><div class="terminal-bar"><span class="terminal-lights"><i></i><i></i><i></i></span><span>quick start</span><button class="copy-button" type="button" data-copy="install" aria-label="Copy install commands">Copy</button></div><pre id="install"><code>git clone https://github.com/SciValidityBench/SciValidityBench.git
+cd SciValidityBench
+python -m pip install -e ".[dev]"
+pytest -q</code></pre></div>
+          <div class="code-aside"><div class="aside-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM8 10l2 2-2 2m4 0h4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg></div><h3>Runnable by design</h3><p>Compile one TaskSpec, inspect every memory view, then exercise counterfactual pairing and repair.</p><a href="https://github.com/SciValidityBench/SciValidityBench" class="inline-link">View the reference code <span>↗</span></a></div>
+        </div>
+        <div class="citation-card reveal"><div><span class="eyebrow">Citation</span><h3>Cite the preprint when you build on it.</h3></div><button class="copy-button copy-citation" type="button" data-copy="citation" aria-label="Copy citation">Copy BibTeX</button><pre id="citation"><code><span class="cite-type">@misc</span><span class="cite-punct">{</span><span class="cite-key">pan2026scivaliditybench</span><span class="cite-punct">,</span>
+  <span class="cite-field">title</span><span class="cite-punct">=</span><span class="cite-value">{The Right Fact, the Wrong Decision:
+         SciValidityBench for Scientific Agent Memory}</span><span class="cite-punct">,</span>
+  <span class="cite-field">author</span><span class="cite-punct">=</span><span class="cite-value">{Pan, Yuexi and Chen, Yongchao}</span><span class="cite-punct">,</span>
+  <span class="cite-field">year</span><span class="cite-punct">=</span><span class="cite-value">{2026}</span><span class="cite-punct">,</span>
+  <span class="cite-field">url</span><span class="cite-punct">=</span><span class="cite-value">{https://scivaliditybench.github.io/SciValidityBench/}</span>
+}</code></pre></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="page-width footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><defs><linearGradient id="brandOrbitFooter" x1="10" y1="40" x2="44" y2="12" gradientUnits="userSpaceOnUse"><stop stop-color="#0071e3"/><stop offset="1" stop-color="#7158cf"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="#eef4ff"/><circle cx="32" cy="32" r="20" fill="none" stroke="#a9c3ea" stroke-width="1.6" stroke-dasharray="1.6 3.6" stroke-linecap="round"/><g class="orbit-arc"><circle cx="32" cy="32" r="20" fill="none" stroke="url(#brandOrbitFooter)" stroke-width="4.6" stroke-linecap="round" pathLength="100" stroke-dasharray="38 62" transform="rotate(-200 32 32)"/><circle cx="41" cy="14.1" r="4" fill="#7158cf" stroke="#eef4ff" stroke-width="2"/></g><circle cx="32" cy="32" r="6.5" fill="#1d1d1f"/></svg></span>SciValidityBench</a><div class="footer-links"><a href="assets/SciValidityBench.pdf">Paper</a><a href="https://github.com/SciValidityBench/SciValidityBench">GitHub ↗</a></div><p class="footer-legal">Code: Apache 2.0 <span>·</span> Project materials: CC BY 4.0 <span>·</span> © 2026 SciValidityBench contributors</p></div>
+  </footer>
+</body>
+</html>
