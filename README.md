@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="docs/assets/SciValidityBench.pdf">📄 Paper</a>
+  <a href="https://arxiv.org/abs/2610.34767">📄 Paper</a>
   &nbsp;·&nbsp;
   <a href="https://scivaliditybench.github.io/SciValidityBench/">🌐 Website</a>
   &nbsp;·&nbsp;
@@ -97,11 +97,14 @@ No external model service is required for the examples or tests. They exercise b
 ## 📚 Citation
 
 ```bibtex
-@misc{pan2026scivaliditybench,
+@misc{pan2026rightfactwrongdecision,
   title = {The Right Fact, the Wrong Decision: SciValidityBench for Scientific Agent Memory},
-  author = {Pan, Yuexi and Chen, Yongchao},
+  author = {Yuexi Pan and Yongchao Chen},
   year = {2026},
-  url = {https://scivaliditybench.github.io/SciValidityBench/}
+  eprint = {2610.34767},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.AI},
+  url = {https://arxiv.org/abs/2610.34767}
 }
 ```
 

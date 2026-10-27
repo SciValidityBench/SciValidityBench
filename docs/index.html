@@ -27,7 +27,7 @@
         <a href="#benchmark"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg><span>Benchmark</span></a>
         <a href="#evidence"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19V9m7 10V5m7 14v-7"/></svg><span>Evidence</span></a>
         <a href="#code"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m7 8-4 4 4 4m10-8 4 4-4 4M14 5l-4 14"/></svg><span>Code</span></a>
-        <a class="nav-paper" href="assets/SciValidityBench.pdf"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM15 3v4h4"/><path d="M9 12h6m-6 4h4"/></svg><span>Paper</span><b aria-hidden="true">↗</b></a>
+        <a class="nav-paper" href="https://arxiv.org/abs/2610.34767"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM15 3v4h4"/><path d="M9 12h6m-6 4h4"/></svg><span>Paper</span><b aria-hidden="true">↗</b></a>
       </nav>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span>
@@ -49,7 +49,7 @@
         <p class="affiliations"><sup>1</sup> Tsinghua University &nbsp; <sup>2</sup> University of Science and Technology of China</p>
         <p class="hero-note"><span class="note-star">*</span> Corresponding author</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="assets/SciValidityBench.pdf">Paper <span aria-hidden="true">↗</span></a>
+          <a class="button button-primary" href="https://arxiv.org/abs/2610.34767">Paper <span aria-hidden="true">↗</span></a>
           <a class="button button-quiet" href="https://github.com/SciValidityBench/SciValidityBench">Code <span aria-hidden="true">↗</span></a>
           <a class="button button-video-improved" href="#video">Video <span aria-hidden="true">↓</span></a>
           <a class="button button-quiet" href="#benchmark">Benchmark <span aria-hidden="true">↓</span></a>
@@ -191,19 +191,22 @@ python -m pip install -e ".[dev]"
 pytest -q</code></pre></div>
           <div class="code-aside"><div class="aside-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM8 10l2 2-2 2m4 0h4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg></div><h3>Runnable by design</h3><p>Compile one TaskSpec, inspect every memory view, then exercise counterfactual pairing and repair.</p><a href="https://github.com/SciValidityBench/SciValidityBench" class="inline-link">View the reference code <span>↗</span></a></div>
         </div>
-        <div class="citation-card reveal"><div><span class="eyebrow">Citation</span><h3>Cite the preprint when you build on it.</h3></div><button class="copy-button copy-citation" type="button" data-copy="citation" aria-label="Copy citation">Copy BibTeX</button><pre id="citation"><code><span class="cite-type">@misc</span><span class="cite-punct">{</span><span class="cite-key">pan2026scivaliditybench</span><span class="cite-punct">,</span>
+        <div class="citation-card reveal"><div><span class="eyebrow">Citation</span><h3>Cite the preprint when you build on it.</h3></div><button class="copy-button copy-citation" type="button" data-copy="citation" aria-label="Copy citation">Copy BibTeX</button><pre id="citation"><code><span class="cite-type">@misc</span><span class="cite-punct">{</span><span class="cite-key">pan2026rightfactwrongdecision</span><span class="cite-punct">,</span>
   <span class="cite-field">title</span><span class="cite-punct">=</span><span class="cite-value">{The Right Fact, the Wrong Decision:
          SciValidityBench for Scientific Agent Memory}</span><span class="cite-punct">,</span>
-  <span class="cite-field">author</span><span class="cite-punct">=</span><span class="cite-value">{Pan, Yuexi and Chen, Yongchao}</span><span class="cite-punct">,</span>
+  <span class="cite-field">author</span><span class="cite-punct">=</span><span class="cite-value">{Yuexi Pan and Yongchao Chen}</span><span class="cite-punct">,</span>
   <span class="cite-field">year</span><span class="cite-punct">=</span><span class="cite-value">{2026}</span><span class="cite-punct">,</span>
-  <span class="cite-field">url</span><span class="cite-punct">=</span><span class="cite-value">{https://scivaliditybench.github.io/SciValidityBench/}</span>
+  <span class="cite-field">eprint</span><span class="cite-punct">=</span><span class="cite-value">{2610.34767}</span><span class="cite-punct">,</span>
+  <span class="cite-field">archivePrefix</span><span class="cite-punct">=</span><span class="cite-value">{arXiv}</span><span class="cite-punct">,</span>
+  <span class="cite-field">primaryClass</span><span class="cite-punct">=</span><span class="cite-value">{cs.AI}</span><span class="cite-punct">,</span>
+  <span class="cite-field">url</span><span class="cite-punct">=</span><span class="cite-value">{https://arxiv.org/abs/2610.34767}</span>
 }</code></pre></div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="page-width footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><defs><linearGradient id="brandOrbitFooter" x1="10" y1="40" x2="44" y2="12" gradientUnits="userSpaceOnUse"><stop stop-color="#0071e3"/><stop offset="1" stop-color="#7158cf"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="#eef4ff"/><circle cx="32" cy="32" r="20" fill="none" stroke="#a9c3ea" stroke-width="1.6" stroke-dasharray="1.6 3.6" stroke-linecap="round"/><g class="orbit-arc"><circle cx="32" cy="32" r="20" fill="none" stroke="url(#brandOrbitFooter)" stroke-width="4.6" stroke-linecap="round" pathLength="100" stroke-dasharray="38 62" transform="rotate(-200 32 32)"/><circle cx="41" cy="14.1" r="4" fill="#7158cf" stroke="#eef4ff" stroke-width="2"/></g><circle cx="32" cy="32" r="6.5" fill="#1d1d1f"/></svg></span>SciValidityBench</a><div class="footer-links"><a href="assets/SciValidityBench.pdf">Paper</a><a href="https://github.com/SciValidityBench/SciValidityBench">GitHub ↗</a></div><p class="footer-legal">Code: Apache 2.0 <span>·</span> Project materials: CC BY 4.0 <span>·</span> © 2026 SciValidityBench contributors</p></div>
+    <div class="page-width footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><defs><linearGradient id="brandOrbitFooter" x1="10" y1="40" x2="44" y2="12" gradientUnits="userSpaceOnUse"><stop stop-color="#0071e3"/><stop offset="1" stop-color="#7158cf"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="#eef4ff"/><circle cx="32" cy="32" r="20" fill="none" stroke="#a9c3ea" stroke-width="1.6" stroke-dasharray="1.6 3.6" stroke-linecap="round"/><g class="orbit-arc"><circle cx="32" cy="32" r="20" fill="none" stroke="url(#brandOrbitFooter)" stroke-width="4.6" stroke-linecap="round" pathLength="100" stroke-dasharray="38 62" transform="rotate(-200 32 32)"/><circle cx="41" cy="14.1" r="4" fill="#7158cf" stroke="#eef4ff" stroke-width="2"/></g><circle cx="32" cy="32" r="6.5" fill="#1d1d1f"/></svg></span>SciValidityBench</a><div class="footer-links"><a href="https://arxiv.org/abs/2610.34767">Paper</a><a href="https://github.com/SciValidityBench/SciValidityBench">GitHub ↗</a></div><p class="footer-legal">Code: Apache 2.0 <span>·</span> Project materials: CC BY 4.0 <span>·</span> © 2026 SciValidityBench contributors</p></div>
   </footer>
 </body>
 </html>
